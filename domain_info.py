@@ -75,10 +75,9 @@ def dominfo(domain_name, ns_server_ip, record):
         print(e)
 
 
-
 @click.command()
 @click.option('--domain', required=True, help='domain name to query')
-@click.option('--who', is_flag=True, help='query google + sitesdepot ns')
+@click.option('--who', is_flag=True, help='whois data only')
 @click.option('--ns', help='IP of ns server')
 def domain_info(domain, who, ns):
     """ Simple Whois + Dig Cli Tool """
